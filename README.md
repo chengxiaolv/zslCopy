@@ -26,14 +26,14 @@ npm test
 
 ```
   1.用到的技术
-    1.1. 技术框架：vue  element-ui  axios 
-    1.2. css 预编译为  scss
+    （1） 技术框架：vue  element-ui  axios 
+    （2）. css 预编译为  scss
 
   2.重点文件说明：
-    2.1. utils中 （都已经在main.js中注册了。）
-        2.1.1  1.1axios.js将axios重新封装了   
-        2.1.2  filters.js里面是全局的过滤器方法
-        2.1.3  utils.js是全局的注册方法。  
+    （1） utils中 （都已经在main.js中注册了。）
+       -  axios.js将axios重新封装了   
+       -  filters.js里面是全局的过滤器方法
+       -  utils.js是全局的注册方法。  
         
              
 
