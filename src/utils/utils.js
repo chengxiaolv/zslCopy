@@ -1,13 +1,14 @@
 // 获取cookie    getCookie(name)
 // 设置cookie    setCookie(c_name, value, expiredays)
 // 删除cookie    delCookie(name)
-// 获得当前年月格式时间(yyyy-mm / yyyy-mm-dd)    getNowTime()
+// 获得当前年月格式时间(yyyy-mm)    getNowDateMonth()
+// 获得当前年月日格式时间(yyyy-mm-dd)    getNowDateDay()
 // 比较是否在时、分的范围段内    timeRange(beginTime, endTime, nowTime) 
-
+// 深拷贝对象  jsonClone()
 
 var util = {
     /**
-     * 获取cookie、
+     * 获取cookie
      * @param {传入的cookie名} name 
      */
     getCookie(name) {
@@ -18,7 +19,7 @@ var util = {
             return null;
     },
     /**
-     * 设置cookie,增加到vue实例方便全局调用
+     * 设置cookie
      * @param {cookie名} c_name 
      * @param {cookie值} value 
      * @param {设置时间戳} expiredays 
@@ -28,9 +29,10 @@ var util = {
         exdate.setDate(exdate.getDate() + expiredays);
         document.cookie = c_name + "=" + escape(value) + ((expiredays == null) ? "" : ";expires=" + exdate.toGMTString());
     },
+
     /**
      * 删除cookie
-     * name  传入cookie的名字即可
+     * @param {传入cookie的名字即可} name 
      */
     delCookie(name) {
         var exp = new Date();
@@ -41,10 +43,8 @@ var util = {
     },
     /**
      * 获得当前年月格式时间 （yyyy-mm）
-     * 获得当前年月格式时间 （ yyyy-mm-dd） //放开下面的注释的时候，获取这样的时间格式
-     * xx = getNowTime();  //使用方法
      */
-    getNowTime() {
+    getNowDateMonth() {
         var date = new Date();
         var seperator1 = "-";
         var year = date.getFullYear();
@@ -56,19 +56,33 @@ var util = {
         if (strDate >= 0 && strDate <= 9) {
             strDate = "0" + strDate;
         }
-        // var currentdate = year + seperator1 + month + seperator1 + strDate; // yyyy-mm-dd
-        var currentdate = year + seperator1 + month; // yyyy-mm
+        var currentdate = year + seperator1 + month;
         return currentdate;
     },
     /**
-     * 
-     * @param {*} beginTime  范围的开始时间
-     * @param {*} endTime    范围的结束时间
-     * @param {*} nowTime    判断是否在范围段的时间
-     *  
-     *     var time = "09:09";  var beginTime = "20:00";  var endTime = "22:00";
-     * 
-     *      当判断的时间等于范围时间  也是属于范围内
+     * 获得当前年月日格式时间 （ yyyy-mm-dd） 
+     */
+    getNowDateDay() {
+        var date = new Date();
+        var seperator1 = "-";
+        var year = date.getFullYear();
+        var month = date.getMonth() + 1;
+        var strDate = date.getDate();
+        if (month >= 1 && month <= 9) {
+            month = "0" + month;
+        }
+        if (strDate >= 0 && strDate <= 9) {
+            strDate = "0" + strDate;
+        }
+        var currentdate = year + seperator1 + month + seperator1 + strDate; // yyyy-mm-dd
+        return currentdate;
+    },
+    /**
+     * 当判断的时间等于范围时间  也是属于范围内
+     * var time = "09:09";  var beginTime = "20:00";  var endTime = "22:00";    
+     * @param {范围的开始时间} beginTime  
+     * @param {范围的结束时间} endTime    
+     * @param {判断是否在范围段的时间} nowTime    
      */
     timeRange(beginTime, endTime, nowTime) {
         var arr = beginTime.split(":");
@@ -138,6 +152,14 @@ var util = {
                 return false;
             }
         }
+    },
+    /**
+     * 深拷贝对象 是为了处理原有对象 并且不改变原始对象。
+     * 注意： 此方法只能 深拷贝 那些能够被 json 直接表示的数据格式。
+     * @param {*} obj 
+     */
+    jsonClone(obj) {
+        return JSON.parse(JSON.stringify(onj));
     }
 }
 

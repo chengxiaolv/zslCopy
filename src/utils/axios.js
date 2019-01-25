@@ -16,7 +16,7 @@
 
 // 在http.js中引入axios
 import axios from 'axios'; // 引入axios
-import QS from 'qs'; // 引入qs模块，用来序列化post类型的数据，后面会提到
+import QS from 'qs'; // 引入qs模块，用来序列化post类型的数据，后面会提到   (npm install qs)
 // vant的Message提示框组件，大家可根据自己的ui组件更改。
 import { Message } from 'element-ui';
 import router from "../router"; //引入，为了跳转登录页。
@@ -77,9 +77,9 @@ axios.interceptors.response.use(
         if (response.status === 200) {
             if (response.data.statusCode == '10001') {
                 // 失败时 跳转登录页
-                router.push({
-                    path: "/tupianyulan"
-                });
+                // router.push({
+                //     path: "/tupianyulan"
+                // });
             }
             return Promise.resolve(response);
         } else {
