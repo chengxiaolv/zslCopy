@@ -156,7 +156,7 @@ var util = {
     /**
      * 深拷贝对象 是为了处理原有对象 并且不改变原始对象。
      * 注意： 此方法只能 深拷贝 那些能够被 json 直接表示的数据格式。
-     * @param {*} obj 
+     * @param {传入深拷贝的对象} obj 
      */
     jsonClone(obj) {
         return JSON.parse(JSON.stringify(onj));
