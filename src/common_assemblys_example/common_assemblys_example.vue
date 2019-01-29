@@ -16,6 +16,7 @@
         <tabBar_example v-if="show_assembly == 'tabBar_example'"></tabBar_example>
         <breadcrumb_example v-if="show_assembly == 'breadcrumb_example'"></breadcrumb_example>
         <listSelect_example v-if="show_assembly == 'listSelect_example'"></listSelect_example>
+        <secondaryBtn_example v-if="show_assembly == 'secondaryBtn_example'"></secondaryBtn_example>
       </div>
     </div>
   </div>
@@ -26,6 +27,7 @@
   import tabBar_example from './tabBar_example.vue';
   import breadcrumb_example from './breadcrumb_example.vue';
   import listSelect_example from './listSelect_example.vue';
+  import secondaryBtn_example from './secondaryBtn_example.vue';
   export default {
     data() {
       return {
@@ -45,6 +47,10 @@
             name: "列表查询搜索框",
             show: true,
             val: 'listSelect_example'
+          },{
+            name: "次级辅色按钮",
+            show: true,
+            val: 'secondaryBtn_example'
           }
         ],
         show_assembly: 'tabBarList'
@@ -77,7 +83,8 @@
       tabBarList_example,
       tabBar_example,
       breadcrumb_example,
-      listSelect_example
+      listSelect_example,
+      secondaryBtn_example
     }
   }
 </script>
