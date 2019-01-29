@@ -44,7 +44,7 @@
     data () {
         return{
           secondaryBtnSetBlue:{ // 设置次级辅色按钮的配置集合  
-            colorFlag: 'blue',  // 这是必填的， 选者你的按键种类。 目前只有这七种   green   blue  bluish_green  red  violet  orange  crimson 
+            colorFlag: 'blue',  // 这是必填的， 选者你的按键种类。 目前只有这七种  green(绿色)   blue(蓝色)  bluish_green(青蓝)  red(红色)  violet(紫色)  orange(橘色)  crimson(深红)
             text: '开票申请', // 这是必填的，按键的名称
             disabled: false, // 这个是选填的  true的时候  按键禁用
 

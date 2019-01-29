@@ -24,6 +24,7 @@ Vue.component('tabBar', resolve => require(['./common_assemblys/tabBar.vue'], re
 Vue.component('breadcrumb', resolve => require(['./common_assemblys/breadcrumb.vue'], resolve)); // 面包屑
 Vue.component('listSelect', resolve => require(['./common_assemblys/listSelect.vue'], resolve)); // 列表查询搜索框
 Vue.component('secondaryBtn', resolve => require(['./common_assemblys/secondaryBtn.vue'], resolve)); // 次级辅色按钮集合
+Vue.component('auxiliaryBtn', resolve => require(['./common_assemblys/auxiliaryBtn.vue'], resolve)); // 辅色按钮集合
 
 
 Vue.config.productionTip = false
