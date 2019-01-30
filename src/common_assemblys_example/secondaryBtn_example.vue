@@ -1,40 +1,40 @@
 <template>
   <div>
     <!-- 可以直接这样写一个对象 -->
-    <secondaryBtn :secondaryBtnSet="{colorFlag:'green',text:'上传报告',disabled: false}" @buttonClick="buttonClickBreen"></secondaryBtn>
+    <secondaryBtn :secondaryBtnSet="{colorFlag:'green',text:'上传报告',disabled: false}" @btnClick="buttonClickBreen"></secondaryBtn>
 
     <br>
     <br>
 
     <!-- 也可以在data里面定义一个变量来控制 -->
-    <secondaryBtn :secondaryBtnSet="secondaryBtnSetBlue" @buttonClick="buttonClickBreen"></secondaryBtn>
+    <secondaryBtn :secondaryBtnSet="secondaryBtnSetBlue" @btnClick="buttonClickBreen"></secondaryBtn>
 
     <br>
     <br>
 
-    <secondaryBtn :secondaryBtnSet="{colorFlag:'bluish_green',text:'编 辑',disabled: false}" @buttonClick="buttonClickBreen"></secondaryBtn>
+    <secondaryBtn :secondaryBtnSet="{colorFlag:'bluish_green',text:'编 辑',disabled: false}" @btnClick="buttonClickBreen"></secondaryBtn>
 
     <br>
     <br>
 
-    <secondaryBtn :secondaryBtnSet="{colorFlag:'red',text:'冻结账户',disabled: false}" @buttonClick="buttonClickBreen"></secondaryBtn>
+    <secondaryBtn :secondaryBtnSet="{colorFlag:'red',text:'冻结账户',disabled: false}" @btnClick="buttonClickBreen"></secondaryBtn>
 
     <br>
     <br>
 
-    <secondaryBtn :secondaryBtnSet="{colorFlag:'violet',text:'离 职',disabled: false}" @buttonClick="buttonClickBreen"></secondaryBtn>
+    <secondaryBtn :secondaryBtnSet="{colorFlag:'violet',text:'离 职',disabled: false}" @btnClick="buttonClickBreen"></secondaryBtn>
 
     <br>
     <br>
 
-    <secondaryBtn :secondaryBtnSet="{colorFlag:'orange',text:'取消冻结',disabled: false}" @buttonClick="buttonClickBreen"></secondaryBtn>
+    <secondaryBtn :secondaryBtnSet="{colorFlag:'orange',text:'取消冻结',disabled: false}" @btnClick="buttonClickBreen"></secondaryBtn>
 
     <br>
     <br>
 
-    <secondaryBtn :secondaryBtnSet="{colorFlag:'crimson',text:'驳回', disabled: true}" @buttonClick="buttonClickBreen"></secondaryBtn>
+    <secondaryBtn :secondaryBtnSet="{colorFlag:'crimson',text:'驳回', disabled: true}" @btnClick="buttonClickBreen"></secondaryBtn>
     <br>
-    <secondaryBtn :secondaryBtnSet="{colorFlag:'crimson',text:'驳回', disabled: false}" @buttonClick="buttonClickBreen"></secondaryBtn>
+    <secondaryBtn :secondaryBtnSet="{colorFlag:'crimson',text:'驳回', disabled: false}" @btnClick="buttonClickBreen"></secondaryBtn>
 
   </div>
 </template>

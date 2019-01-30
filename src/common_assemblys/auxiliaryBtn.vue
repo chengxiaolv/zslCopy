@@ -1,19 +1,19 @@
 <template>
   <div>
     <!-- 红色 -->
-    <span class="red" @click.stop="buttonClick" :style="secondaryBtnSet" v-if="secondaryBtnSet.colorFlag == 'red'" :class="{invalidColor: secondaryBtnSet.disabled}">{{secondaryBtnSet.text}}</span> 
+    <span class="red" @click.stop="btnClick" :style="secondaryBtnSet" v-if="secondaryBtnSet.colorFlag == 'red'" :class="{invalidColor: secondaryBtnSet.disabled}">{{secondaryBtnSet.text}}</span> 
     <!-- 橘黄 -->
-    <span class="orange" @click.stop="buttonClick" :style="secondaryBtnSet" v-if="secondaryBtnSet.colorFlag == 'orange'" :class="{invalidColor: secondaryBtnSet.disabled}">{{secondaryBtnSet.text}}</span> 
+    <span class="orange" @click.stop="btnClick" :style="secondaryBtnSet" v-if="secondaryBtnSet.colorFlag == 'orange'" :class="{invalidColor: secondaryBtnSet.disabled}">{{secondaryBtnSet.text}}</span> 
     <!-- 青色 -->
-    <span class="cyan" @click.stop="buttonClick" :style="secondaryBtnSet" v-if="secondaryBtnSet.colorFlag == 'cyan'" :class="{invalidColor: secondaryBtnSet.disabled}">{{secondaryBtnSet.text}}</span> 
+    <span class="cyan" @click.stop="btnClick" :style="secondaryBtnSet" v-if="secondaryBtnSet.colorFlag == 'cyan'" :class="{invalidColor: secondaryBtnSet.disabled}">{{secondaryBtnSet.text}}</span> 
     <!-- 玫红 -->
-    <span class="roseRed" @click.stop="buttonClick" :style="secondaryBtnSet" v-if="secondaryBtnSet.colorFlag == 'roseRed'" :class="{invalidColor: secondaryBtnSet.disabled}">{{secondaryBtnSet.text}}</span> 
+    <span class="roseRed" @click.stop="btnClick" :style="secondaryBtnSet" v-if="secondaryBtnSet.colorFlag == 'roseRed'" :class="{invalidColor: secondaryBtnSet.disabled}">{{secondaryBtnSet.text}}</span> 
     <!-- 深蓝 -->
-    <span class="darkBlue" @click.stop="buttonClick" :style="secondaryBtnSet" v-if="secondaryBtnSet.colorFlag == 'darkBlue'" :class="{invalidColor: secondaryBtnSet.disabled}">{{secondaryBtnSet.text}}</span> 
+    <span class="darkBlue" @click.stop="btnClick" :style="secondaryBtnSet" v-if="secondaryBtnSet.colorFlag == 'darkBlue'" :class="{invalidColor: secondaryBtnSet.disabled}">{{secondaryBtnSet.text}}</span> 
     <!-- 草绿 -->
-    <span class="grassGreen" @click.stop="buttonClick" :style="secondaryBtnSet" v-if="secondaryBtnSet.colorFlag == 'grassGreen'" :class="{invalidColor: secondaryBtnSet.disabled}">{{secondaryBtnSet.text}}</span> 
+    <span class="grassGreen" @click.stop="btnClick" :style="secondaryBtnSet" v-if="secondaryBtnSet.colorFlag == 'grassGreen'" :class="{invalidColor: secondaryBtnSet.disabled}">{{secondaryBtnSet.text}}</span> 
     <!-- 青蓝 -->
-    <span class="bluishGreen" @click.stop="buttonClick" :style="secondaryBtnSet" v-if="secondaryBtnSet.colorFlag == 'bluishGreen'" :class="{invalidColor: secondaryBtnSet.disabled}">{{secondaryBtnSet.text}}</span> 
+    <span class="bluishGreen" @click.stop="btnClick" :style="secondaryBtnSet" v-if="secondaryBtnSet.colorFlag == 'bluishGreen'" :class="{invalidColor: secondaryBtnSet.disabled}">{{secondaryBtnSet.text}}</span> 
   </div>
 </template>
 <script>
@@ -23,11 +23,11 @@
       }
     },
     methods: {
-      buttonClick(){
+      btnClick(){
         if(this.secondaryBtnSet.disabled){
           return;
         }
-        this.$emit('buttonClick');
+        this.$emit('btnClick');
       },
     },
     props: ['secondaryBtnSet']

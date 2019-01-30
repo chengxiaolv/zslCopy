@@ -1,40 +1,40 @@
 <template>
   <div>
     <!-- 可以直接这样写一个对象 -->
-    <auxiliaryBtn :secondaryBtnSet="{colorFlag:'red',text:'取消',disabled: false}" @buttonClick="buttonClickBreen"></auxiliaryBtn>
+    <auxiliaryBtn :secondaryBtnSet="{colorFlag:'red',text:'取消',disabled: false}" @btnClick="buttonClickBreen"></auxiliaryBtn>
 
     <br>
     <br>
 
     <!-- 也可以在data里面定义一个变量来控制 -->
-    <auxiliaryBtn :secondaryBtnSet="secondaryBtnSetBlue" @buttonClick="buttonClickBreen"></auxiliaryBtn>
+    <auxiliaryBtn :secondaryBtnSet="secondaryBtnSetBlue" @btnClick="buttonClickBreen"></auxiliaryBtn>
 
     <br>
     <br>
 
-    <auxiliaryBtn :secondaryBtnSet="{colorFlag:'cyan',text:'编辑',disabled: false}" @buttonClick="buttonClickBreen"></auxiliaryBtn>
+    <auxiliaryBtn :secondaryBtnSet="{colorFlag:'cyan',text:'编辑',disabled: false}" @btnClick="buttonClickBreen"></auxiliaryBtn>
 
     <br>
     <br>
 
-    <auxiliaryBtn :secondaryBtnSet="{colorFlag:'roseRed',text:'撤销',disabled: false}" @buttonClick="buttonClickBreen"></auxiliaryBtn>
+    <auxiliaryBtn :secondaryBtnSet="{colorFlag:'roseRed',text:'撤销',disabled: false}" @btnClick="buttonClickBreen"></auxiliaryBtn>
 
     <br>
     <br>
 
-    <auxiliaryBtn :secondaryBtnSet="{colorFlag:'darkBlue',text:'关联',disabled: false}" @buttonClick="buttonClickBreen"></auxiliaryBtn>
+    <auxiliaryBtn :secondaryBtnSet="{colorFlag:'darkBlue',text:'关联',disabled: false}" @btnClick="buttonClickBreen"></auxiliaryBtn>
 
     <br>
     <br>
 
-    <auxiliaryBtn :secondaryBtnSet="{colorFlag:'grassGreen',text:'重新选择',disabled: false}" @buttonClick="buttonClickBreen"></auxiliaryBtn>
+    <auxiliaryBtn :secondaryBtnSet="{colorFlag:'grassGreen',text:'重新选择',disabled: false}" @btnClick="buttonClickBreen"></auxiliaryBtn>
 
     <br>
     <br>
 
-    <auxiliaryBtn :secondaryBtnSet="{colorFlag:'bluishGreen',text:'退回',disabled: false}" @buttonClick="buttonClickBreen"></auxiliaryBtn>
+    <auxiliaryBtn :secondaryBtnSet="{colorFlag:'bluishGreen',text:'退回',disabled: false}" @btnClick="buttonClickBreen"></auxiliaryBtn>
     <br>
-    <auxiliaryBtn :secondaryBtnSet="{colorFlag:'bluishGreen',text:'退回',disabled: true}" @buttonClick="buttonClickBreen"></auxiliaryBtn>
+    <auxiliaryBtn :secondaryBtnSet="{colorFlag:'bluishGreen',text:'退回',disabled: true}" @btnClick="buttonClickBreen"></auxiliaryBtn>
 
     <br>
     <br>
