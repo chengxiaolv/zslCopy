@@ -2,6 +2,8 @@
   <div>
     <!-- 可以直接这样写一个对象 -->
     <secondaryBtn :secondaryBtnSet="{colorFlag:'green',text:'上传报告',disabled: false}" @btnClick="buttonClickBreen"></secondaryBtn>
+    <br>
+    <secondaryBtn :secondaryBtnSet="{colorFlag:'green',text:'上传报告',disabled: true}" @btnClick="buttonClickBreen"></secondaryBtn>
 
     <br>
     <br>
