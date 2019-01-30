@@ -60,7 +60,7 @@
     color: #3BA4EC;
     &:hover{
       color:#3BA4EC;
-      background-color: #B3D6F3;
+      background-color: #F4FAFF;
       border: solid 1px #B3D6F3;
     }
   }
