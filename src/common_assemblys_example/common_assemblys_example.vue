@@ -18,6 +18,7 @@
         <listSelect_example v-if="show_assembly == 'listSelect_example'"></listSelect_example>
         <secondaryBtn_example v-if="show_assembly == 'secondaryBtn_example'"></secondaryBtn_example>
         <auxiliaryBtn_example v-if="show_assembly == 'auxiliaryBtn_example'"></auxiliaryBtn_example>
+        <mainBtn_example v-if="show_assembly == 'mainBtn_example'"></mainBtn_example>
       </div>
     </div>
   </div>
@@ -30,6 +31,7 @@
   import listSelect_example from './listSelect_example.vue';
   import secondaryBtn_example from './secondaryBtn_example.vue';
   import auxiliaryBtn_example from './auxiliaryBtn_example.vue';
+  import mainBtn_example from './mainBtn_example.vue';
   export default {
     data() {
       return {
@@ -57,6 +59,10 @@
             name: "辅色按钮",
             show: false,
             val: 'auxiliaryBtn_example'
+          },{
+            name: "主色按键",
+            show: false,
+            val: 'mainBtn_example'
           }
         ],
         show_assembly: 'tabBarList'
@@ -91,7 +97,8 @@
       breadcrumb_example,
       listSelect_example,
       secondaryBtn_example,
-      auxiliaryBtn_example
+      auxiliaryBtn_example,
+      mainBtn_example
     }
   }
 </script>

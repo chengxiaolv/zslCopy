@@ -25,6 +25,7 @@ Vue.component('breadcrumb', resolve => require(['./common_assemblys/breadcrumb.v
 Vue.component('listSelect', resolve => require(['./common_assemblys/listSelect.vue'], resolve)); // 列表查询搜索框
 Vue.component('secondaryBtn', resolve => require(['./common_assemblys/secondaryBtn.vue'], resolve)); // 次级辅色按钮集合
 Vue.component('auxiliaryBtn', resolve => require(['./common_assemblys/auxiliaryBtn.vue'], resolve)); // 辅色按钮集合
+Vue.component('mainBtn', resolve => require(['./common_assemblys/mainBtn.vue'], resolve)); // 主色按键.
 
 
 Vue.config.productionTip = false
