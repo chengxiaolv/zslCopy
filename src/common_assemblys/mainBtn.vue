@@ -1,7 +1,7 @@
 <template>
   <div>
     <!-- 绿色 -->
-    <span class="mainBtn" :style="mainBtnSet" :class="{invalidColor: mainBtnSet.disabled}" @click.stop="btnClick">{{mainBtnSet.text}}</span> 
+    <span class="mainBtn" :style="mainBtnSet" :class="{invalidColor: mainBtnSet.disabled,small:mainBtnSet.size}" @click.stop="btnClick">{{mainBtnSet.text}}</span> 
   </div>
 </template>
 <script>
@@ -46,5 +46,10 @@
       color:#fff;
       background-color: #D8D8D8 !important;
     } 
+  }
+  .small{  //设置小按键
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
   }
 </style>

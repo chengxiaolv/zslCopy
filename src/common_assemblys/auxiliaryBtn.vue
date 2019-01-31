@@ -1,19 +1,19 @@
 <template>
   <div>
     <!-- 红色 -->
-    <span class="red" @click.stop="btnClick" :style="auxiliaryBtnSet" v-if="auxiliaryBtnSet.colorFlag == 'red'" :class="{invalidColor: auxiliaryBtnSet.disabled}">{{auxiliaryBtnSet.text}}</span> 
+    <span class="red" @click.stop="btnClick" :style="auxiliaryBtnSet" v-if="auxiliaryBtnSet.colorFlag == 'red'" :class="{invalidColor: auxiliaryBtnSet.disabled,small:auxiliaryBtnSet.size}">{{auxiliaryBtnSet.text}}</span> 
     <!-- 橘黄 -->
-    <span class="orange" @click.stop="btnClick" :style="auxiliaryBtnSet" v-if="auxiliaryBtnSet.colorFlag == 'orange'" :class="{invalidColor: auxiliaryBtnSet.disabled}">{{auxiliaryBtnSet.text}}</span> 
+    <span class="orange" @click.stop="btnClick" :style="auxiliaryBtnSet" v-if="auxiliaryBtnSet.colorFlag == 'orange'" :class="{invalidColor: auxiliaryBtnSet.disabled,small:auxiliaryBtnSet.size}">{{auxiliaryBtnSet.text}}</span> 
     <!-- 青色 -->
-    <span class="cyan" @click.stop="btnClick" :style="auxiliaryBtnSet" v-if="auxiliaryBtnSet.colorFlag == 'cyan'" :class="{invalidColor: auxiliaryBtnSet.disabled}">{{auxiliaryBtnSet.text}}</span> 
+    <span class="cyan" @click.stop="btnClick" :style="auxiliaryBtnSet" v-if="auxiliaryBtnSet.colorFlag == 'cyan'" :class="{invalidColor: auxiliaryBtnSet.disabled,small:auxiliaryBtnSet.size}">{{auxiliaryBtnSet.text}}</span> 
     <!-- 玫红 -->
-    <span class="roseRed" @click.stop="btnClick" :style="auxiliaryBtnSet" v-if="auxiliaryBtnSet.colorFlag == 'roseRed'" :class="{invalidColor: auxiliaryBtnSet.disabled}">{{auxiliaryBtnSet.text}}</span> 
+    <span class="roseRed" @click.stop="btnClick" :style="auxiliaryBtnSet" v-if="auxiliaryBtnSet.colorFlag == 'roseRed'" :class="{invalidColor: auxiliaryBtnSet.disabled,small:auxiliaryBtnSet.size}">{{auxiliaryBtnSet.text}}</span> 
     <!-- 深蓝 -->
-    <span class="darkBlue" @click.stop="btnClick" :style="auxiliaryBtnSet" v-if="auxiliaryBtnSet.colorFlag == 'darkBlue'" :class="{invalidColor: auxiliaryBtnSet.disabled}">{{auxiliaryBtnSet.text}}</span> 
+    <span class="darkBlue" @click.stop="btnClick" :style="auxiliaryBtnSet" v-if="auxiliaryBtnSet.colorFlag == 'darkBlue'" :class="{invalidColor: auxiliaryBtnSet.disabled,small:auxiliaryBtnSet.size}">{{auxiliaryBtnSet.text}}</span> 
     <!-- 草绿 -->
-    <span class="grassGreen" @click.stop="btnClick" :style="auxiliaryBtnSet" v-if="auxiliaryBtnSet.colorFlag == 'grassGreen'" :class="{invalidColor: auxiliaryBtnSet.disabled}">{{auxiliaryBtnSet.text}}</span> 
+    <span class="grassGreen" @click.stop="btnClick" :style="auxiliaryBtnSet" v-if="auxiliaryBtnSet.colorFlag == 'grassGreen'" :class="{invalidColor: auxiliaryBtnSet.disabled,small:auxiliaryBtnSet.size}">{{auxiliaryBtnSet.text}}</span> 
     <!-- 青蓝 -->
-    <span class="bluishGreen" @click.stop="btnClick" :style="auxiliaryBtnSet" v-if="auxiliaryBtnSet.colorFlag == 'bluishGreen'" :class="{invalidColor: auxiliaryBtnSet.disabled}">{{auxiliaryBtnSet.text}}</span> 
+    <span class="bluishGreen" @click.stop="btnClick" :style="auxiliaryBtnSet" v-if="auxiliaryBtnSet.colorFlag == 'bluishGreen'" :class="{invalidColor: auxiliaryBtnSet.disabled,small:auxiliaryBtnSet.size}">{{auxiliaryBtnSet.text}}</span> 
   </div>
 </template>
 <script>
@@ -90,8 +90,6 @@
       background-color: #54C2CF;
     }
   }
-
-
   .invalidColor{  // 单独设置深红失效状态
     color: #fff !important;
     background-color: #D8D8D8 !important;
@@ -100,5 +98,11 @@
       color:#fff;
       background-color: #D8D8D8 !important;
     } 
+  }
+
+  .small{  //设置小按键
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
   }
 </style>

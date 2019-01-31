@@ -19,6 +19,7 @@
         <secondaryBtn_example v-if="show_assembly == 'secondaryBtn_example'"></secondaryBtn_example>
         <auxiliaryBtn_example v-if="show_assembly == 'auxiliaryBtn_example'"></auxiliaryBtn_example>
         <mainBtn_example v-if="show_assembly == 'mainBtn_example'"></mainBtn_example>
+        <deletePopup_example v-if="show_assembly == 'deletePopup_example'"></deletePopup_example>
       </div>
     </div>
   </div>
@@ -32,6 +33,7 @@
   import secondaryBtn_example from './secondaryBtn_example.vue';
   import auxiliaryBtn_example from './auxiliaryBtn_example.vue';
   import mainBtn_example from './mainBtn_example.vue';
+  import deletePopup_example from './deletePopup_example.vue';
   export default {
     data() {
       return {
@@ -63,6 +65,10 @@
             name: "主色按键",
             show: false,
             val: 'mainBtn_example'
+          },{
+            name: "删除弹窗",
+            show: false,
+            val: 'deletePopup_example'
           }
         ],
         show_assembly: 'tabBarList'
@@ -98,7 +104,8 @@
       listSelect_example,
       secondaryBtn_example,
       auxiliaryBtn_example,
-      mainBtn_example
+      mainBtn_example,
+      deletePopup_example
     }
   }
 </script>

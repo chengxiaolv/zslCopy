@@ -35,6 +35,7 @@
     <auxiliaryBtn :auxiliaryBtnSet="{colorFlag:'bluishGreen',text:'退回',disabled: false}" @btnClick="buttonClickBreen"></auxiliaryBtn>
     <br>
     <auxiliaryBtn :auxiliaryBtnSet="{colorFlag:'bluishGreen',text:'退回',disabled: true}" @btnClick="buttonClickBreen"></auxiliaryBtn>
+    
 
     <br>
     <br>
@@ -50,6 +51,7 @@
             colorFlag: 'orange',  // 这是必填的， 选者你的按键种类。目前只有这七种   red(红色)  orange(橘红)  cyan(青色)  roseRed(玫红)  darkBlue(深蓝)  grassGreen(草绿)  bluishGreen(青蓝)
             text: '暂存', // 这是必填的，按键的名称 
             disabled: false, // 这个是选填的  true的时候  按键禁用
+            size: true, // 这个是选填的  false的时候或者不填的时候  大按键   true的时候为小按键 
 
             // 这里可以设置 按键的一切配置。 如果不配置的话，会使用组件的默认值。（以下都是选填的。）
             width: '',
