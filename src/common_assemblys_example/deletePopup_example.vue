@@ -1,6 +1,6 @@
 <template>
   <div>
-    <mainBtn :mainBtnSet="{text:'新建职员'}" @btnClick="showDeleteTips" ></mainBtn>
+    <mainBtn :mainBtnSet="{text:'删除弹窗'}" @btnClick="showDeleteTips" ></mainBtn>
 
     
     <deletePopup :deleteTips="deleteTips" @cancelBtn="cancelBtn" @deleteBtn="deleteBtn" v-show="isShowDeleteTips"></deletePopup>
@@ -19,6 +19,8 @@
       showDeleteTips(){  //展现删除弹窗
         this.isShowDeleteTips = true;
       },
+
+
       cancelBtn(){ //删除弹窗的取消事件
         this.isShowDeleteTips = false;
       },

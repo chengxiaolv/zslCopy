@@ -2,7 +2,7 @@
 <!-- 弹窗组件 -->
 <template>
 	<div class="delete-wrapper" id='wrapper' @click="cancelBtn">
-		<div class="delete_center">
+		<div class="delete_center" @click.stop=" 'stopBubbling' ">
 			<div class="content">
 				{{deleteTips}}
 			</div>

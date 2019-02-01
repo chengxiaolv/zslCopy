@@ -20,6 +20,7 @@
         <auxiliaryBtn_example v-if="show_assembly == 'auxiliaryBtn_example'"></auxiliaryBtn_example>
         <mainBtn_example v-if="show_assembly == 'mainBtn_example'"></mainBtn_example>
         <deletePopup_example v-if="show_assembly == 'deletePopup_example'"></deletePopup_example>
+        <uploadFile_example v-if="show_assembly == 'uploadFile_example'"></uploadFile_example>
       </div>
     </div>
   </div>
@@ -34,6 +35,7 @@
   import auxiliaryBtn_example from './auxiliaryBtn_example.vue';
   import mainBtn_example from './mainBtn_example.vue';
   import deletePopup_example from './deletePopup_example.vue';
+  import uploadFile_example from './uploadFile_example.vue';
   export default {
     data() {
       return {
@@ -69,6 +71,10 @@
             name: "删除弹窗",
             show: false,
             val: 'deletePopup_example'
+          },{
+            name: "上传组件",
+            show: false,
+            val: 'uploadFile_example'
           }
         ],
         show_assembly: 'tabBarList'
@@ -105,7 +111,8 @@
       secondaryBtn_example,
       auxiliaryBtn_example,
       mainBtn_example,
-      deletePopup_example
+      deletePopup_example,
+      uploadFile_example
     }
   }
 </script>

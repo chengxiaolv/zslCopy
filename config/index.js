@@ -11,16 +11,18 @@ module.exports = {
         assetsSubDirectory: 'static',
         assetsPublicPath: '/',
         proxyTable: {
-            "/service": {
-                target: "http://hospital.tzucpa.cn",
-                changeOrigin: true,
-                secure: false,
 
-                // pathRewrite: {
-                //反向代理的话， 如果是传参的形式。 一定加上下面这段代码
-                //     '^/service': ''
-                // }
-            }
+
+
+
+            /**
+             * 下面是为了 演示  封装组件时的反向代理    可以删除。
+             */
+            "/service": {
+                target: "http://v5test.tzucpa.cn",
+                changeOrigin: true,
+                secure: false
+            },
         },
 
         // Various Dev Server settings

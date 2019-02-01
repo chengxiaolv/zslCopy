@@ -16,11 +16,10 @@
       post() {
         this.https.post("/service", {   // post 的使用方法。
           data: JSON.stringify({
-            command: "login",
-            platform: "web",
-            loginName: 1,
-            psd: 123456,
-            type: "managerSystem"
+            command: 'login',
+            platform: 'web',
+            phone: '18622348235',
+            phoneCode: '1234',
           })
         })
           .then(
@@ -39,11 +38,10 @@
       get(){
         this.https.get("/service", {   // get 的使用方法。
           data: {
-            command: "login",
-            platform: "web",
-            loginName: 1,
-            psd: 123456,
-            type: "managerSystem"
+            command: 'login',
+            platform: 'web',
+            phone: '18622348235',
+            phoneCode: '1234',
           }
         })
           .then(
