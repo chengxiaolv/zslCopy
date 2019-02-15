@@ -17,6 +17,7 @@ module.exports = {
 
             /**
              * 下面是为了 演示  封装组件时的反向代理    可以删除。
+             * 这里是  axios封装 和 上传组件中会使用到。 （演示功能）
              */
             "/service": {
                 target: "http://v5test.tzucpa.cn",

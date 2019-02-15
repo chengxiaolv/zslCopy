@@ -3,7 +3,7 @@
     <mainBtn :mainBtnSet="{text:'删除弹窗'}" @btnClick="showDeleteTips" ></mainBtn>
 
     
-    <deletePopup :deleteTips="deleteTips" @cancelBtn="cancelBtn" @deleteBtn="deleteBtn" v-show="isShowDeleteTips"></deletePopup>
+    <deletePopup :deleteTips="deleteTips" @cancelBtn="cancelBtn" @deleteBtn="deleteBtn" v-if="isShowDeleteTips"></deletePopup>
   </div>
 </template>
 
@@ -11,7 +11,7 @@
   export default {
     data () {
         return{
-          deleteTips: '删除后无法返回，是否确定删除暂存项目',
+          deleteTips: '删除后无法返回，是否确定删除暂存项目',  // 删除内容的提示文字
           isShowDeleteTips: true
         }
     },

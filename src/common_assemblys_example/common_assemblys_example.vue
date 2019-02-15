@@ -72,7 +72,7 @@
             show: false,
             val: 'deletePopup_example'
           },{
-            name: "上传组件",
+            name: "上传文件组件",
             show: false,
             val: 'uploadFile_example'
           }

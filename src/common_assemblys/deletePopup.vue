@@ -1,7 +1,7 @@
 
 <!-- 弹窗组件 -->
 <template>
-	<div class="delete-wrapper" id='wrapper' @click="cancelBtn">
+	<div class="delete-wrapper" id='wrapper'>
 		<div class="delete_center" @click.stop=" 'stopBubbling' ">
 			<div class="content">
 				{{deleteTips}}
@@ -22,7 +22,6 @@
 		},
 		methods: {
 			cancelBtn(){ // 取消
-			  // this.isShowDeleteTips = false;
 				this.$emit("cancelBtn")
 			},
 			deleteBtn(){ // 确定删除
