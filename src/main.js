@@ -37,6 +37,7 @@ Vue.component('deletePopup', resolve => require(['./common_assemblys/deletePopup
 Vue.component('myUpload', resolve => require(['./common_assemblys/myUpload.vue'], resolve)); // 上传文件组件
 Vue.component('uploadFile', resolve => require(['./common_assemblys/uploadFile.vue'], resolve)); // 上传展示成功文件。
 Vue.component('previewImg', resolve => require(['./common_assemblys/previewImg.vue'], resolve)); // 预览pdf格式的上传文件
+Vue.component('annexDownload', resolve => require(['./common_assemblys/annexDownload.vue'], resolve)); // 文件下载按钮
 
 
 Vue.config.productionTip = false

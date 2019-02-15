@@ -21,6 +21,7 @@
         <mainBtn_example v-if="show_assembly == 'mainBtn_example'"></mainBtn_example>
         <deletePopup_example v-if="show_assembly == 'deletePopup_example'"></deletePopup_example>
         <uploadFile_example v-if="show_assembly == 'uploadFile_example'"></uploadFile_example>
+        <annexDownload_example v-if="show_assembly == 'annexDownload_example'"></annexDownload_example>
       </div>
     </div>
   </div>
@@ -36,6 +37,7 @@
   import mainBtn_example from './mainBtn_example.vue';
   import deletePopup_example from './deletePopup_example.vue';
   import uploadFile_example from './uploadFile_example.vue';
+  import annexDownload_example from './annexDownload_example.vue';
   export default {
     data() {
       return {
@@ -75,6 +77,10 @@
             name: "上传文件组件",
             show: false,
             val: 'uploadFile_example'
+          },{
+            name: "下载文件组件",
+            show: false,
+            val: 'annexDownload_example'
           }
         ],
         show_assembly: 'tabBarList'
@@ -112,7 +118,8 @@
       auxiliaryBtn_example,
       mainBtn_example,
       deletePopup_example,
-      uploadFile_example
+      uploadFile_example,
+      annexDownload_example
     }
   }
 </script>
