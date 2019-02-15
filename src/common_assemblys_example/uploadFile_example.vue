@@ -4,11 +4,18 @@
 
     <br>
     <br>
+		<span>单文件上传 &nbsp;&nbsp;&nbsp;&nbsp; 并且只能上传 jpg、jpeg、png、pdf 格式</span>
+    <br>
     <br>
     
     <uploadFile :uploadFileSet='uploadFileSet' @getFileList="getFileList"></uploadFile>
 
     <br>
+    <br>
+    <br>
+    <br>
+    <br>
+		<span>上传多文件  &nbsp;&nbsp;&nbsp;&nbsp; 任意格式</span>
     <br>
     <br>
     
