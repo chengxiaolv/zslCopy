@@ -1,25 +1,16 @@
 <template>
   <div>
-    <!-- 红色 -->
-    <span class="red" @click.stop="btnClick" :style="auxiliaryBtnSet" v-if="auxiliaryBtnSet.colorFlag == 'red'" :class="{invalidColor: auxiliaryBtnSet.disabled,small:auxiliaryBtnSet.size}">{{auxiliaryBtnSet.text}}</span> 
-    <!-- 橘黄 -->
-    <span class="orange" @click.stop="btnClick" :style="auxiliaryBtnSet" v-if="auxiliaryBtnSet.colorFlag == 'orange'" :class="{invalidColor: auxiliaryBtnSet.disabled,small:auxiliaryBtnSet.size}">{{auxiliaryBtnSet.text}}</span> 
-    <!-- 青色 -->
-    <span class="cyan" @click.stop="btnClick" :style="auxiliaryBtnSet" v-if="auxiliaryBtnSet.colorFlag == 'cyan'" :class="{invalidColor: auxiliaryBtnSet.disabled,small:auxiliaryBtnSet.size}">{{auxiliaryBtnSet.text}}</span> 
-    <!-- 玫红 -->
-    <span class="roseRed" @click.stop="btnClick" :style="auxiliaryBtnSet" v-if="auxiliaryBtnSet.colorFlag == 'roseRed'" :class="{invalidColor: auxiliaryBtnSet.disabled,small:auxiliaryBtnSet.size}">{{auxiliaryBtnSet.text}}</span> 
-    <!-- 深蓝 -->
-    <span class="darkBlue" @click.stop="btnClick" :style="auxiliaryBtnSet" v-if="auxiliaryBtnSet.colorFlag == 'darkBlue'" :class="{invalidColor: auxiliaryBtnSet.disabled,small:auxiliaryBtnSet.size}">{{auxiliaryBtnSet.text}}</span> 
-    <!-- 草绿 -->
-    <span class="grassGreen" @click.stop="btnClick" :style="auxiliaryBtnSet" v-if="auxiliaryBtnSet.colorFlag == 'grassGreen'" :class="{invalidColor: auxiliaryBtnSet.disabled,small:auxiliaryBtnSet.size}">{{auxiliaryBtnSet.text}}</span> 
-    <!-- 青蓝 -->
-    <span class="bluishGreen" @click.stop="btnClick" :style="auxiliaryBtnSet" v-if="auxiliaryBtnSet.colorFlag == 'bluishGreen'" :class="{invalidColor: auxiliaryBtnSet.disabled,small:auxiliaryBtnSet.size}">{{auxiliaryBtnSet.text}}</span> 
+    <span @click.stop="btnClick" :style="auxiliaryBtnSet" :class="classObject">{{auxiliaryBtnSet.text}}</span> 
   </div>
 </template>
 <script>
   export default {
     data () {
       return{
+        classObject:{
+          invalidColor: this.auxiliaryBtnSet.disabled,
+          [this.auxiliaryBtnSet.colorFlag]: this.auxiliaryBtnSet.colorFlag
+        }
       }
     },
     methods: {
